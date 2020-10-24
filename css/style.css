@@ -72,3 +72,11 @@ body {
     font-size: 3em;
     margin: 0 auto;
 }
+
+.section__detail {
+    text-align: center;
+    letter-spacing: .25em;
+    font-size: 1em;
+    margin: 5em;
+    display: block;
+}
