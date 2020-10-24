@@ -3,6 +3,7 @@
     --width: 100vw;
     --full-width: 100vw;
     --height: 540px;
+    --text-color: #264653;
 /* Magic Number */
   
 /* the 0.043744 is calculated by this formula: tan(5°) / 2 */ 
@@ -56,6 +57,7 @@ body {
     letter-spacing: .25em;
     font-size: 5em;
     margin: 0 auto;
+    color: var(--text-color);
 }
 
 .header__description {
@@ -64,6 +66,7 @@ body {
     font-size: 3em;
     line-height: 1em;
     margin-top: .5em;
+    color: var(--text-color);
 }
 
 .section__title {
@@ -71,6 +74,7 @@ body {
     letter-spacing: .25em;
     font-size: 3em;
     margin: 0 auto;
+    color: var(--text-color);
 }
 
 .section__detail {
@@ -79,4 +83,5 @@ body {
     font-size: 1em;
     margin: 5em;
     display: block;
+    color: var(--text-color);
 }
