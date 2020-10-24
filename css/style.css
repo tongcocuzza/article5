@@ -1,0 +1,74 @@
+:root {
+    --angle: -5deg;
+    --width: 100vw;
+    --full-width: 100vw;
+    --height: 540px;
+/* Magic Number */
+  
+/* the 0.043744 is calculated by this formula: tan(5°) / 2 */ 
+  --magic-number: 0.043744;
+  --skew-padding: calc(var(--width) * var(--magic-number));
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: "Willful";
+    src: url("/font/Willful.ttf") format("truetype");
+}
+
+body {
+    font-family: "Willful";
+}
+
+.diagonal__box {
+    position: relative;
+    padding: var(--skew-padding);
+    margin-top: -8px;
+    height: var(--height);
+}
+
+.diagonal__box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #2a9d8f;
+    transform: skewY(var(--angle));
+    transform-origin: bottom left;
+    backface-visibility: hidden;
+}
+
+.header__content {
+    max-width: var(--width);
+    margin-top: 1em;
+    padding: 1em;
+    position: relative;
+    transform: skewY(var(--angle));
+}
+
+.header__title {
+    text-align: center;
+    letter-spacing: .25em;
+    font-size: 5em;
+    margin: 0 auto;
+}
+
+.header__description {
+    text-align: center;
+    letter-spacing: .25em;
+    font-size: 3em;
+    line-height: 1em;
+    margin-top: .5em;
+}
+
+.section__title {
+    text-align: center;
+    letter-spacing: .25em;
+    font-size: 3em;
+    margin: 0 auto;
+}
