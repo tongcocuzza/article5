@@ -27,8 +27,7 @@ body {
 .diagonal__box {
     position: relative;
     padding: var(--skew-padding);
-    margin-top: -8px;
-    height: var(--height);
+    height: var(--height);  
 }
 
 .diagonal__box::before {
@@ -40,7 +39,7 @@ body {
     left: 0;
     background-color: #2a9d8f;
     transform: skewY(var(--angle));
-    transform-origin: bottom left;
+    transform-origin: top left;
     backface-visibility: hidden;
 }
 
