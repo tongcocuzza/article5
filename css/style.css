@@ -101,12 +101,14 @@ body {
   width: 100px;
   border-radius: 50%;
   justify-content: center;
+  position: relative;
 }
 
 .header__button:hover {
   cursor: pointer;
   color: var(--text-color);
-  background-color: whitesmoke; 
+  background-color: whitesmoke;
+  animation: pulse 3s 0s ease-out infinite; 
 }
 
 .animate__pop__in {
@@ -122,14 +124,26 @@ body {
   animation-delay: 1s;
 }
 
-.header__button {
-  animation-delay: 1.2s;
-}
 
 @keyframes pop-in {
   0% {
     opacity: 0;
     transform: translateY(-4rem) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  50% {
+    opacity: .9;
+    transform: scale(.9);
   }
   100% {
     opacity: 1;
