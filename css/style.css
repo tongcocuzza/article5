@@ -71,10 +71,11 @@ body {
 }
 
 .section__title {
-  text-align: center;
+  text-align: right;
   letter-spacing: 0.25em;
   font-size: 3em;
   margin: 0 auto;
+  padding-right: 1.5em;
   color: var(--text-color);
 }
 
